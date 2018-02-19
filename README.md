@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="200" height="200" src="https://github.com/esarabadani/Roham/blob/master/Images/Roham_Logo.png">
+  <img width="200" height="200" src="https://github.com/Haufe-Lexware/roham/blob/master/Images/Roham_Logo.png">
 </p>
 <p align="center"> Developed by: Esmaeil Sarabadani </p>  
 <p align="center"> Contact me at: Esmaeil.Sarabadani@haufe-lexware.com </p>
@@ -29,13 +29,13 @@ Roham consists of the following Lambda functions which are written in Python:
 Our recommendation is to create a central Shared Services AWS Account and create/import these Lambda functions there and then control tagging/termination/stop/start of your EC2 Instances in all your other AWS project Accounts. The diagram below shows the big picture:
 
 <p align="center">
-  <img width="450" height="652" src="https://github.com/esarabadani/Roham/blob/master/Images/big-picture.png">
+  <img width="450" height="652" src="https://github.com/Haufe-Lexware/roham/blob/master/Images/big-picture.png">
 </p>
 
 The diagram and the steps below show how Roham (in this case Roham Stopper) works across AWS Accounts and takes actions on EC2 Instances:
 
 <p align="center">
-  <img width="824" height="363" src="https://github.com/esarabadani/Roham/blob/master/Images/small-picture.png">
+  <img width="824" height="363" src="https://github.com/Haufe-Lexware/roham/blob/master/Images/small-picture.png">
 </p>
 
   1. CloudWatch Event triggers the SNS Topic and passes the IAM Role ARN to it. 
@@ -47,11 +47,11 @@ The diagram and the steps below show how Roham (in this case Roham Stopper) work
 > The same concept in the steps above applies to the other three Lambda functions. This means every project AWS Account will have a separate CloudWatch Rule and a separate SNS Topic for each Lambda function. Please see the diagram below:
 
 <p align="center">
-  <img width="824" height="363" src="https://github.com/esarabadani/Roham/blob/master/Images/Account_Resources_View.png">
+  <img width="824" height="363" src="https://github.com/Haufe-Lexware/roham/blob/master/Images/Account_Resources_View.png">
 </p>
 
 # Implementation
-There is a complete step-by-step guide on how to implement Roham in your AWS environment here [on this page](https://github.com/esarabadani/Roham/blob/master/Configuration/How_to_Implement.md).
+There is a complete step-by-step guide on how to implement Roham in your AWS environment here [on this page](https://github.com/Haufe-Lexware/roham/blob/master/Configuration/How_to_Implement.md).
 
 # Tagging Scheme
 Once you follow the steps in the implementation guide and everything is done, now it is time to tag your EC2 Instances. Please follow the tagging scheme in the table below:
