@@ -2,7 +2,7 @@
   <img width="200" height="200" src="https://github.com/esarabadani/Roham/blob/master/Images/Roham_Logo.png">
 </p>
 <p align="center"> Developed by: Esmaeil Sarabadani </p>  
-<p align="center"> Contact me at: e.sarabadani@gmail.com </p>
+<p align="center"> Contact me at: Esmaeil.Sarabadani@haufe-lexware.com </p>
 
 # What is Roham?
 Roham saves you cost on AWS by stopping/terminating/starting Instances on schedules defined by you. Roham gives you these benefits:
@@ -79,7 +79,7 @@ The table below briefly explains how you need to format your cron expression to 
 |:---:|:---|
 | Comma (,) | Commas are used to separate items of a list. For example, using "mon,wed,fri" in the 5th field (day of week) means Mondays, Wednesdays and Fridays. |
 | Hyphen (-) | Hyphens define ranges. For example, mon-fri means from Monday to Friday |
-| Asterisk (*) | Asterisks are used to select all values within a field. For example, * in the Month field means ìevery monthî |
+| Asterisk (*) | Asterisks are used to select all values within a field. For example, * in the Month field means ‚Äúevery month‚Äù |
 
 Now let's see some example expressions and their definitions:
   
