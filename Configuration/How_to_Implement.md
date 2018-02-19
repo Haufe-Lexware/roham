@@ -4,7 +4,7 @@ This guide will walk you through all the steps to implement Roham in your AWS en
 The goal of this guide is to have the diagram below implemented for every single component of Roham (Tagger, Stopper, Starter, Terminator):
 
 <p align="center">
-  <img width="824" height="363" src="https://github.com/esarabadani/Roham/blob/master/Images/small-picture.png">
+  <img width="824" height="363" src="https://github.com/Haufe-Lexware/roham/blob/master/Images/small-picture.png">
 </p>
 
 So as shown in the diagram above, Roham will be implemented on a central Shared Services AWS Account and manages EC2 Instances in other AWS Accounts. Roham has two different categories for the other AWS Accounts which it manages:
@@ -64,7 +64,7 @@ Create a custom IAM Role with the following JSON content and name it Roham_Role_
 }
 ```
 ### Create a separate Lambda function for each Roham component
-Download the function zip files from [here](https://github.com/esarabadani/Roham/tree/master/Source/Lambda_Packages)
+Download the function zip files from [here](https://github.com/Haufe-Lexware/roham/tree/master/Source/Lambda_Packages)
 You will need to repeat the steps below one at a time for each of these four packages. let's say first we do it for Roham Tagger. Run the following AWS CLI command to create the Lambda function:
 ```sh
 aws lambda create-function --function-name Roham_Tagger --runtime python3.6 --role arn:aws:iam::111111111111:role/Roham_Role_Master --handler lambda_function.lambda_handler --timeout 300 --zip-file fileb://"C:\Users\esmaeil\Desktop\Roham\Functions\Tagger\Roham_Tagger_Lambda.zip" --profile shared --region eu-central-1
@@ -144,7 +144,7 @@ Now we need to add a target (SNS Topic) to our CloudWatch Rule. There is no simp
 Open the Console -> Oen the CloudWatch Rules -> Select the your Rule -> Click Actions -> Click Edit:
 
 <p align="center">
-  <img width="1000" height="340" src="https://github.com/esarabadani/Roham/blob/master/Images/rule-edit.png">
+  <img width="1000" height="340" src="https://github.com/Haufe-Lexware/roham/blob/master/Images/rule-edit.png">
 </p>
 
 Click Add Target. Select and add your SNS Topic and click Configure input -> select Constant and add the following JSON string:
@@ -152,7 +152,7 @@ Click Add Target. Select and add your SNS Topic and click Configure input -> sel
 { "rolearn": "arn:aws:iam::222222222222:role/Roham_Role", "account_type": "dev" }
 ```
 <p align="center">
-  <img width="1000" height="383" src="https://github.com/esarabadani/Roham/blob/master/Images/rule-edit-2.png">
+  <img width="1000" height="383" src="https://github.com/Haufe-Lexware/roham/blob/master/Images/rule-edit-2.png">
 </p>
 
 Click Configure details and then click Update rule.
