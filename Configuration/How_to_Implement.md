@@ -1,5 +1,5 @@
 # Introduction
-This guide will walk you through all the steps to implement Roham in your AWS environment. I have tried to cover every small step to achieve a full working setup. If you have any questions, simply send me an email on e.sarabadani@gmail.com and ask, I try my best to respond in a timely manner. However my biggest advice is to make sure you read this documentation thoroughly first before asking your question, becasue there are many points which you might have already missed. 
+This guide will walk you through all the steps to implement Roham in your AWS environment. I have tried to cover every small step to achieve a full working setup. If you have any questions, simply send me an email on Esmaeil.Sarabadani@haufe-lexware.com and ask, I try my best to respond in a timely manner. However my biggest advice is to make sure you read this documentation thoroughly first before asking your question, becasue there are many points which you might have already missed. 
 
 The goal of this guide is to have the diagram below implemented for every single component of Roham (Tagger, Stopper, Starter, Terminator):
 
