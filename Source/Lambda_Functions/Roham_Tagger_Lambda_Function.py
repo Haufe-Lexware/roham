@@ -127,7 +127,7 @@ def lambda_handler(event, context):
                             tostop_tag_value = tag["Value"].lower()
                             break
                     if tostop_tag_value is not None:
-                        if croniter.is_valid(tostop_tag_value) and ('/' not in tostop_tag_value) and tostop_tag_value != "no":
+                        if (croniter.is_valid(tostop_tag_value) and ('/' not in tostop_tag_value)) or (tostop_tag_value == "no"):
                             print("Instance has the correct tostop tag...")
                         else:
                             stop_tagger(conn, instance_id)
