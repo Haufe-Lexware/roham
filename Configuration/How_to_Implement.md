@@ -56,9 +56,14 @@ Create a custom IAM Role with the following JSON content and name it Roham_Role_
     {
       "Effect": "Allow",
       "Principal": {
-        "AWS": "arn:aws:iam::111111111111:root"
+        "Service": "lambda.amazonaws.com"
       },
-      "Action": "sts:AssumeRole"
+      "Action": "sts:AssumeRole",
+      "Condition": {
+        "ArnLike": {
+          "AWS:SourceArn": "arn:aws:lambda:eu-central-1:111111111111:function:*"
+        }
+      }
     }
   ]
 }
